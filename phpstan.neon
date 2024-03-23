@@ -1,0 +1,10 @@
+parameters:
+    level: max
+
+    checkGenericClassInNonGenericObjectType: true
+    reportMaybesInPropertyPhpDocTypes: true
+    checkMissingIterableValueType: true
+    treatPhpDocTypesAsCertain: true
+
+    paths:
+        - src
