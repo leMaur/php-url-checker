@@ -80,10 +80,6 @@ composer test
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
 ## Security Vulnerability
 
 Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
