@@ -86,7 +86,10 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
+This package has been inspired by [Chris White](https://github.com/cwhite92)'s [blog post](https://chriswhite.is/coding/inspecting-http-response-headers-without-downloading-body-with-guzzle/). 
+
 - [Maurizio](https://github.com/lemaur)
+- [Chris White](https://github.com/cwhite92)
 - [All Contributors](../../contributors)
 
 ## License
