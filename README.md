@@ -44,9 +44,12 @@ Here you can see how to use it 👇
 ```php
 use Lemaur\UrlChecker\UrlChecker;
 
-$userAgent = 'MyApp/1.0 (UrlChecker)';
-
-$response = UrlChecker::check('https://google.com', $userAgent);
+$response = UrlChecker::check(
+    url: 'https://google.com', 
+    userAgent: 'MyApp/1.0 (UrlChecker)',
+    connectTimeout: 5,
+    timeout: 10,
+);
 // \Lemaur\UrlChecker\DataTransferObject\CheckData
 
 $response->statusCode;

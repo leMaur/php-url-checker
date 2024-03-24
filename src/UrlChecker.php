@@ -29,10 +29,10 @@ final class UrlChecker
         self::$queue = $queue;
     }
 
-    public static function check(string $url, ?string $userAgent = null): CheckData
+    public static function check(string $url, ?string $userAgent = null, ?int $connectTimeout = null, ?int $timeout = null): CheckData
     {
         try {
-            $response = (new self())->getResponse($url, $userAgent);
+            $response = (new self())->getResponse($url, $userAgent, $connectTimeout, $timeout);
 
             if (!$response instanceof ResponseInterface) {
                 return new CheckData(
@@ -81,7 +81,7 @@ final class UrlChecker
     /**
      * @throws GuzzleException
      */
-    private function getResponse(string $url, ?string $userAgent = null): ?ResponseInterface
+    private function getResponse(string $url, ?string $userAgent = null, ?int $connectTimeout = null, ?int $timeout = null): ?ResponseInterface
     {
         $response = null;
 
@@ -89,8 +89,8 @@ final class UrlChecker
 
         try {
             $client->get($url, [
-                'connect_timeout' => 2,
-                'timeout' => 5,
+                'connect_timeout' => $connectTimeout ?? 2,
+                'timeout' => $timeout ?? 5,
                 'headers' => [
                     'User-Agent' => implode(' ', array_filter([
                         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
