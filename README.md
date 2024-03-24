@@ -54,6 +54,9 @@ $response->statusCode;
 
 $response->reasonPhrase;
 // (string) 'OK'
+
+$response->headers:
+// (array) ['Date' => ['Sun, 24 Mar 2024 09:06:08 GMT']]
 ```
 
 That class also provides another method to help you write unit tests.
