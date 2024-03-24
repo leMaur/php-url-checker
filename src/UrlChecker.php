@@ -44,6 +44,7 @@ final class UrlChecker
             return new CheckData(
                 statusCode: $response->getStatusCode(),
                 reasonPhrase: $response->getReasonPhrase(),
+                headers: $response->getHeaders(),
             );
         } catch (GuzzleException $guzzleException) {
             return new CheckData(

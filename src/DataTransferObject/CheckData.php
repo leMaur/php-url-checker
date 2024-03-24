@@ -9,6 +9,7 @@ final class CheckData
     public function __construct(
         public int $statusCode,
         public string $reasonPhrase,
+        public array $headers = [],
     ) {
     }
 }
