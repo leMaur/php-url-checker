@@ -2,6 +2,16 @@
 
 All notable changes to `php-url-checker` will be documented in this file.
 
+## v1.1.0 - 2024-03-24
+
+### What's Changed
+
+* Add `connect-timeout` and `timeout` parameters to `check` method on `UrlChecker` class by @leMaur
+* Add type for headers array into CheckData.php by @leMaur
+* Extract headers and pass them into CheckData.php by @leMaur
+
+**Full Changelog**: https://github.com/leMaur/php-url-checker/compare/1.0.0...1.1.0
+
 ## v1.0.0 - 2024-03-23
 
 ### What's Changed
