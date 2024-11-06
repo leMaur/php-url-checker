@@ -2,6 +2,17 @@
 
 All notable changes to `php-url-checker` will be documented in this file.
 
+## v1.1.1 - 2024-11-06
+
+### What's Changed
+
+* Bump ramsey/composer-install from 2 to 3 by @dependabot in https://github.com/leMaur/php-url-checker/pull/2
+* Bump aglipanci/laravel-pint-action from 2.3.1 to 2.4 by @dependabot in https://github.com/leMaur/php-url-checker/pull/3
+* Bump dependabot/fetch-metadata from 2.0.0 to 2.1.0 by @dependabot in https://github.com/leMaur/php-url-checker/pull/4
+* Bump dependabot/fetch-metadata from 2.1.0 to 2.2.0 by @dependabot in https://github.com/leMaur/php-url-checker/pull/5
+
+**Full Changelog**: https://github.com/leMaur/php-url-checker/compare/1.1.0...1.1.1
+
 ## v1.1.0 - 2024-03-24
 
 ### What's Changed
