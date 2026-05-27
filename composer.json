@@ -19,13 +19,13 @@
     ],
     "homepage": "https://github.com/lemaur/php-url-checker",
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "guzzlehttp/guzzle": "^7.8"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.42",
         "laravel/pint": "^1.0",
-        "pestphp/pest": "^2.20",
+        "pestphp/pest": "^2.36",
         "pestphp/pest-plugin-type-coverage": "^2.8",
         "phpstan/phpstan": "^1.10",
         "rector/rector": "^1.0",
