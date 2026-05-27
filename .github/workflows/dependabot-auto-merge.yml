@@ -54,4 +54,5 @@ jobs:
           fi
           # --match-head-commit refuses the merge if Dependabot rebased the PR
           # after we validated HEAD_SHA, so we never merge an untested head.
-          gh pr merge --merge --match-head-commit "$HEAD_SHA" "$PR_URL"
+          # Squash (not merge) to keep main's linear history under the branch ruleset.
+          gh pr merge --squash --match-head-commit "$HEAD_SHA" "$PR_URL"
