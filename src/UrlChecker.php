@@ -17,6 +17,13 @@ use Psr\Http\Message\ResponseInterface;
 final class UrlChecker
 {
     /**
+     * Default maximum number of redirect hops to follow before giving up
+     * and returning the last redirect response as-is. Guards against
+     * redirect loops causing unbounded recursion.
+     */
+    public const DEFAULT_MAX_REDIRECTS = 5;
+
+    /**
      * @var array<Response>
      */
     private static array $queue = [];
@@ -29,10 +36,10 @@ final class UrlChecker
         self::$queue = $queue;
     }
 
-    public static function check(string $url, ?string $userAgent = null, ?int $connectTimeout = null, ?int $timeout = null): CheckData
+    public static function check(string $url, ?string $userAgent = null, ?int $connectTimeout = null, ?int $timeout = null, ?int $maxRedirects = null): CheckData
     {
         try {
-            $response = (new self())->getResponse($url, $userAgent, $connectTimeout, $timeout);
+            $response = (new self())->getResponse($url, $userAgent, $connectTimeout, $timeout, $maxRedirects ?? self::DEFAULT_MAX_REDIRECTS);
 
             if (!$response instanceof ResponseInterface) {
                 return new CheckData(
@@ -81,7 +88,7 @@ final class UrlChecker
     /**
      * @throws GuzzleException
      */
-    private function getResponse(string $url, ?string $userAgent = null, ?int $connectTimeout = null, ?int $timeout = null): ?ResponseInterface
+    private function getResponse(string $url, ?string $userAgent = null, ?int $connectTimeout = null, ?int $timeout = null, int $redirectsLeft = self::DEFAULT_MAX_REDIRECTS): ?ResponseInterface
     {
         $response = null;
 
@@ -111,8 +118,14 @@ final class UrlChecker
             }
         }
 
-        if (in_array($response?->getStatusCode(), [301, 302, 307, 308], strict: true)) {
-            return $this->getResponse($response->getHeader('Location')[0] ?? '');
+        if ($redirectsLeft > 0 && in_array($response?->getStatusCode(), [301, 302, 307, 308], strict: true)) {
+            return $this->getResponse(
+                $response->getHeader('Location')[0] ?? '',
+                $userAgent,
+                $connectTimeout,
+                $timeout,
+                $redirectsLeft - 1,
+            );
         }
 
         return $response;
