@@ -39,6 +39,9 @@ composer require lemaur/php-url-checker
 The class `Lemaur\UrlChecker\UrlChecker` provides a static method `check` where accepts the URL to check as first parameter
 and the user agent string as a second parameter.  
 
+Redirects (`301`, `302`, `307`, `308`) are followed automatically, up to `maxRedirects` hops
+(default `5`). Set `maxRedirects: 0` to return the redirect response without following it.
+
 Here you can see how to use it 👇
 
 ```php
@@ -49,6 +52,7 @@ $response = UrlChecker::check(
     userAgent: 'MyApp/1.0 (UrlChecker)',
     connectTimeout: 5,
     timeout: 10,
+    maxRedirects: 5,
 );
 // \Lemaur\UrlChecker\DataTransferObject\CheckData
 
