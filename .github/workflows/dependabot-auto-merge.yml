@@ -52,4 +52,6 @@ jobs:
             echo "::error::Test suite did not pass for ${HEAD_SHA}; not auto-merging."
             exit 1
           fi
-          gh pr merge --merge "$PR_URL"
+          # --match-head-commit refuses the merge if Dependabot rebased the PR
+          # after we validated HEAD_SHA, so we never merge an untested head.
+          gh pr merge --merge --match-head-commit "$HEAD_SHA" "$PR_URL"
