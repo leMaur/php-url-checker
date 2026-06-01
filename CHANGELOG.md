@@ -2,6 +2,19 @@
 
 All notable changes to `php-url-checker` will be documented in this file.
 
+## 2.0.1 - 2026-06-01
+
+### What's Changed
+
+* docs: update CHANGELOG for 2.0.0 by @github-actions[bot] in https://github.com/leMaur/php-url-checker/pull/25
+* chore(ci): add Composer malware + advisory audit gate by @leMaur in https://github.com/leMaur/php-url-checker/pull/26
+
+### New Contributors
+
+* @github-actions[bot] made their first contribution in https://github.com/leMaur/php-url-checker/pull/25
+
+**Full Changelog**: https://github.com/leMaur/php-url-checker/compare/2.0.0...2.0.1
+
 ## 2.0.0 - 2026-05-27
 
 ### What's Changed
