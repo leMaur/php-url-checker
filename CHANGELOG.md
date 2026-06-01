@@ -2,6 +2,21 @@
 
 All notable changes to `php-url-checker` will be documented in this file.
 
+## 2.0.0 - 2026-05-27
+
+### What's Changed
+
+* Bump ramsey/composer-install from 3 to 4 by @dependabot[bot] in https://github.com/leMaur/php-url-checker/pull/17
+* Bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 by @dependabot[bot] in https://github.com/leMaur/php-url-checker/pull/18
+* Bump dependabot/fetch-metadata from 3.0.0 to 3.1.0 by @dependabot[bot] in https://github.com/leMaur/php-url-checker/pull/19
+* chore: drop EOL PHP 8.1, modernize test toolchain by @leMaur in https://github.com/leMaur/php-url-checker/pull/21
+* Add maxRedirects guard to UrlChecker by @leMaur in https://github.com/leMaur/php-url-checker/pull/20
+* chore: SHA-pin all actions + gate Dependabot auto-merge on tests by @leMaur in https://github.com/leMaur/php-url-checker/pull/22
+* fix(ci): code-style check-only (no codebase mutation) by @leMaur in https://github.com/leMaur/php-url-checker/pull/23
+* chore(ci): PR-based changelog + squash (branch-protection rollout) by @leMaur in https://github.com/leMaur/php-url-checker/pull/24
+
+**Full Changelog**: https://github.com/leMaur/php-url-checker/compare/1.1.2...2.0.0
+
 ## 1.1.2 - 2026-01-06
 
 ### What's Changed
