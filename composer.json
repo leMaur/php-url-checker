@@ -49,13 +49,25 @@
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true
         },
+        "policy": {
+            "advisories": {
+                "block": true
+            },
+            "malware": {
+                "block": true,
+                "block-scope": "all"
+            },
+            "abandoned": {
+                "audit": "report"
+            }
+        },
         "sort-packages": true
     },
     "scripts": {
         "post-autoload-dump": "composer normalize",
+        "analyse": "vendor/bin/phpstan analyse",
         "format": "vendor/bin/pint",
         "refactor": "vendor/bin/rector process",
-        "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
         "test:coverage": "vendor/bin/pest --coverage",
         "test:type": "vendor/bin/pest --type-coverage --log-junit=build/type-coverage.xml"
