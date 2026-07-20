@@ -20,7 +20,7 @@
     "homepage": "https://github.com/lemaur/php-url-checker",
     "require": {
         "php": "^8.2",
-        "guzzlehttp/guzzle": "^7.8"
+        "guzzlehttp/guzzle": "^8.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.42",
