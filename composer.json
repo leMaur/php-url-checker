@@ -25,8 +25,8 @@
     "require-dev": {
         "ergebnis/composer-normalize": "^2.42",
         "laravel/pint": "^1.0",
-        "pestphp/pest": "^2.36",
-        "pestphp/pest-plugin-type-coverage": "^2.8",
+        "pestphp/pest": "^2.36 || ^3.0",
+        "pestphp/pest-plugin-type-coverage": "^2.8 || ^3.0",
         "phpstan/phpstan": "^1.10",
         "rector/rector": "^1.0",
         "roave/security-advisories": "dev-latest"
