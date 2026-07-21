@@ -74,7 +74,7 @@ final class UrlChecker
     }
 
     /**
-     * @return array|HandlerStack[]
+     * @return array{handler?: HandlerStack}
      */
     private function getConfig(): array
     {

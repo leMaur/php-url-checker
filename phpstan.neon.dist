@@ -6,5 +6,12 @@ parameters:
     checkMissingIterableValueType: true
     treatPhpDocTypesAsCertain: true
 
+    ignoreErrors:
+        # HandlerStack is generic in Guzzle 8 but not in Guzzle 7; unmatched when analysing against 7.
+        -
+            message: '#generic class GuzzleHttp\\HandlerStack does not specify its types#'
+            path: src/UrlChecker.php
+            reportUnmatched: false
+
     paths:
         - src

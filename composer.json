@@ -20,13 +20,13 @@
     "homepage": "https://github.com/lemaur/php-url-checker",
     "require": {
         "php": "^8.2",
-        "guzzlehttp/guzzle": "^7.8"
+        "guzzlehttp/guzzle": "^7.8 || ^8.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.42",
         "laravel/pint": "^1.0",
-        "pestphp/pest": "^2.36",
-        "pestphp/pest-plugin-type-coverage": "^2.8",
+        "pestphp/pest": "^2.36 || ^3.0",
+        "pestphp/pest-plugin-type-coverage": "^2.8 || ^3.0",
         "phpstan/phpstan": "^1.10",
         "rector/rector": "^1.0",
         "roave/security-advisories": "dev-latest"
@@ -50,15 +50,15 @@
             "phpstan/extension-installer": true
         },
         "policy": {
+            "abandoned": {
+                "audit": "report"
+            },
             "advisories": {
                 "block": true
             },
             "malware": {
                 "block": true,
                 "block-scope": "all"
-            },
-            "abandoned": {
-                "audit": "report"
             }
         },
         "sort-packages": true
