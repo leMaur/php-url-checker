@@ -2,6 +2,22 @@
 
 All notable changes to `php-url-checker` will be documented in this file.
 
+## 2.1.0 - 2026-07-21
+
+### What's Changed
+
+* docs: update CHANGELOG for 2.0.1 by @github-actions[bot] in https://github.com/leMaur/php-url-checker/pull/27
+* docs(ci): correct stale rationale comment in dependabot-auto-merge by @leMaur in https://github.com/leMaur/php-url-checker/pull/28
+* Bump actions/checkout from 6.0.2 to 6.0.3 by @dependabot[bot] in https://github.com/leMaur/php-url-checker/pull/29
+* Bump shivammathur/setup-php from 2.37.1 to 2.37.2 by @dependabot[bot] in https://github.com/leMaur/php-url-checker/pull/30
+* Bump ramsey/composer-install from 5c2bcf28d7b060ef3c601d7b476d5430a7b46c27 to 26d8a556604053a9612623447203a691f406fbe6 by @dependabot[bot] in https://github.com/leMaur/php-url-checker/pull/31
+* ci: set persist-credentials: false on checkout steps by @leMaur in https://github.com/leMaur/php-url-checker/pull/32
+* Bump actions/checkout from 6.0.3 to 7.0.0 by @dependabot[bot] in https://github.com/leMaur/php-url-checker/pull/33
+* Bump actions/checkout from 7.0.0 to 7.0.1 by @dependabot[bot] in https://github.com/leMaur/php-url-checker/pull/34
+* Widen guzzlehttp/guzzle constraint to ^7.8 || ^8.0 and add PHP 8.5 to CI by @dependabot[bot] in https://github.com/leMaur/php-url-checker/pull/35
+
+**Full Changelog**: https://github.com/leMaur/php-url-checker/compare/2.0.1...2.1.0
+
 ## 2.0.1 - 2026-06-01
 
 ### What's Changed
