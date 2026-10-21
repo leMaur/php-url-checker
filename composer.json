@@ -23,12 +23,12 @@
         "guzzlehttp/guzzle": "^7.15.2 || ^8.0.1"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.42",
+        "ergebnis/composer-normalize": "^2.54",
         "laravel/pint": "^1.0",
-        "pestphp/pest": "^2.36 || ^3.0",
-        "pestphp/pest-plugin-type-coverage": "^2.8 || ^3.0",
-        "phpstan/phpstan": "^1.10",
-        "rector/rector": "^1.0",
+        "pestphp/pest": "^3.0 || ^4.0 || ^5.0",
+        "pestphp/pest-plugin-type-coverage": "^3.0 || ^4.0 || ^5.0",
+        "phpstan/phpstan": "^2.1",
+        "rector/rector": "^2.0",
         "roave/security-advisories": "dev-latest"
     },
     "minimum-stability": "dev",
@@ -50,15 +50,15 @@
             "phpstan/extension-installer": true
         },
         "policy": {
-            "abandoned": {
-                "audit": "report"
-            },
             "advisories": {
                 "block": true
             },
             "malware": {
                 "block": true,
                 "block-scope": "all"
+            },
+            "abandoned": {
+                "audit": "report"
             }
         },
         "sort-packages": true
@@ -69,7 +69,7 @@
         "format": "vendor/bin/pint",
         "refactor": "vendor/bin/rector process",
         "test": "vendor/bin/pest",
-        "test:coverage": "vendor/bin/pest --coverage",
+        "test:coverage": "vendor/bin/pest --coverage --coverage-html build/coverage --coverage-text=build/coverage.txt --coverage-clover build/logs/clover.xml",
         "test:type": "vendor/bin/pest --type-coverage --log-junit=build/type-coverage.xml"
     }
 }
