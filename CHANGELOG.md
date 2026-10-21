@@ -2,6 +2,17 @@
 
 All notable changes to `php-url-checker` will be documented in this file.
 
+## 2.1.1 - 2026-10-21
+
+### What's Changed
+
+* fix(deps): require patched guzzlehttp/guzzle by @leMaur in https://github.com/leMaur/php-url-checker/pull/38
+* chore(deps): upgrade to Pest 5, PHPStan 2 and Rector 2 by @leMaur in https://github.com/leMaur/php-url-checker/pull/39
+
+The minimum Guzzle version is now `^7.15.2 || ^8.0.1`. Earlier 7.x releases and 8.0.0 are affected by CVE-2026-69246 (a noncanonical host can bypass host-based checks) and CVE-2026-69245 (a noncanonical cookie domain keeps subdomain scope). The public API is unchanged.
+
+**Full Changelog**: https://github.com/leMaur/php-url-checker/compare/2.1.0...2.1.1
+
 ## 2.1.0 - 2026-07-21
 
 ### What's Changed
