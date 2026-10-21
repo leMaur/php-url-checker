@@ -24,12 +24,12 @@ final class UrlChecker
     public const DEFAULT_MAX_REDIRECTS = 5;
 
     /**
-     * @var array<Response>
+     * @var array<int, Response>
      */
     private static array $queue = [];
 
     /**
-     * @param array<Response> $queue
+     * @param array<int, Response> $queue
      */
     public static function fake(array $queue): void
     {
